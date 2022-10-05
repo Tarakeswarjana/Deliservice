@@ -35,10 +35,11 @@ const Home = () => {
             <Link to="/*">Nopage</Link>
           </li>
         </ul>
+        <div><p>i will be colonial after some time</p></div>
       </nav>
       <div >
 
-       <p> I am from home </p>
+       
 <div style={{padding:"40px"}}>
 <Outlet />
 </div>
