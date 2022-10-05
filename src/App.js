@@ -1,26 +1,29 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Home from './component/Home';
+import Electronics from './component/Electronics';
+import Fotwear from './component/Fotwear';
+import Sport from './component/Sport';
+import Grocery from './component/Grocery';
+import Nopage from './Nopage';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-
-        <p>hiiiiiiiiiiiiiiii this is new project...............</p>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+         <Route path="/" element={<Home />}>
+          
+       
+           <Route path="Electronics" element={<Electronics/>} />
+           <Route path="fotwear" element={<Fotwear/>} />
+           <Route path="Sport" element={<Sport />} />
+           <Route path="Grocery" element={<Grocery />} />
+           
+          <Route path="*" element={<Nopage />} />
+         </Route>
+       </Routes>
+     </BrowserRouter>
   );
 }
 
